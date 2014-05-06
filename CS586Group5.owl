@@ -1,0 +1,615 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY untitled-ontology-22 "http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:untitled-ontology-22="http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#">
+    <Ontology rdf:about="http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#belongsToGenre -->
+
+    <ObjectProperty rdf:about="&untitled-ontology-22;belongsToGenre">
+        <rdfs:range rdf:resource="&untitled-ontology-22;Genre"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Movie"/>
+        <inverseOf rdf:resource="&untitled-ontology-22;isGenreOf"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#hasActor -->
+
+    <ObjectProperty rdf:about="&untitled-ontology-22;hasActor">
+        <rdfs:range rdf:resource="&untitled-ontology-22;Actor"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Movie"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#hasDirector -->
+
+    <ObjectProperty rdf:about="&untitled-ontology-22;hasDirector">
+        <rdfs:range rdf:resource="&untitled-ontology-22;Director"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Movie"/>
+        <inverseOf rdf:resource="&untitled-ontology-22;isDirectorOf"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#hasProducer -->
+
+    <ObjectProperty rdf:about="&untitled-ontology-22;hasProducer">
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Movie"/>
+        <rdfs:range rdf:resource="&untitled-ontology-22;Producer"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#isActorIn -->
+
+    <ObjectProperty rdf:about="&untitled-ontology-22;isActorIn">
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Actor"/>
+        <rdfs:range rdf:resource="&untitled-ontology-22;Movie"/>
+        <inverseOf rdf:resource="&untitled-ontology-22;hasActor"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#isAdaptedinto -->
+
+    <ObjectProperty rdf:about="&untitled-ontology-22;isAdaptedinto">
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Book"/>
+        <rdfs:range rdf:resource="&untitled-ontology-22;Movie"/>
+        <inverseOf rdf:resource="&untitled-ontology-22;isBasedOn"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#isAuthorOf -->
+
+    <ObjectProperty rdf:about="&untitled-ontology-22;isAuthorOf">
+        <rdfs:range rdf:resource="&untitled-ontology-22;Book"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Writer"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#isAwardOf -->
+
+    <ObjectProperty rdf:about="&untitled-ontology-22;isAwardOf">
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Award"/>
+        <rdfs:range rdf:resource="&untitled-ontology-22;Movie"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#isAwardedWith -->
+
+    <ObjectProperty rdf:about="&untitled-ontology-22;isAwardedWith">
+        <rdfs:range rdf:resource="&untitled-ontology-22;Award"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Movie"/>
+        <inverseOf rdf:resource="&untitled-ontology-22;isAwardOf"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#isBasedOn -->
+
+    <ObjectProperty rdf:about="&untitled-ontology-22;isBasedOn">
+        <rdfs:range rdf:resource="&untitled-ontology-22;Book"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Movie"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#isDirectorOf -->
+
+    <ObjectProperty rdf:about="&untitled-ontology-22;isDirectorOf">
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Director"/>
+        <rdfs:range rdf:resource="&untitled-ontology-22;Movie"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#isGenreOf -->
+
+    <ObjectProperty rdf:about="&untitled-ontology-22;isGenreOf">
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Genre"/>
+        <rdfs:range rdf:resource="&untitled-ontology-22;Movie"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#isProducerOf -->
+
+    <ObjectProperty rdf:about="&untitled-ontology-22;isProducerOf">
+        <rdfs:range rdf:resource="&untitled-ontology-22;Movie"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Producer"/>
+        <inverseOf rdf:resource="&untitled-ontology-22;hasProducer"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#isWrittenBy -->
+
+    <ObjectProperty rdf:about="&untitled-ontology-22;isWrittenBy">
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Book"/>
+        <rdfs:range rdf:resource="&untitled-ontology-22;Writer"/>
+        <inverseOf rdf:resource="&untitled-ontology-22;isAuthorOf"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#Awardname -->
+
+    <DatatypeProperty rdf:about="&untitled-ontology-22;Awardname"/>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#birthDate -->
+
+    <DatatypeProperty rdf:about="&untitled-ontology-22;birthDate">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Actor"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Director"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Person"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Producer"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Writer"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#bookname -->
+
+    <DatatypeProperty rdf:about="&untitled-ontology-22;bookname">
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Book"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#description -->
+
+    <DatatypeProperty rdf:about="&untitled-ontology-22;description">
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Genre"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#imdbrating -->
+
+    <DatatypeProperty rdf:about="&untitled-ontology-22;imdbrating">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Movie"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#language -->
+
+    <DatatypeProperty rdf:about="&untitled-ontology-22;language">
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Book"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#movietitle -->
+
+    <DatatypeProperty rdf:about="&untitled-ontology-22;movietitle">
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Movie"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#name -->
+
+    <DatatypeProperty rdf:about="&untitled-ontology-22;name">
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Actor"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Director"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Person"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Producer"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Writer"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#nationality -->
+
+    <DatatypeProperty rdf:about="&untitled-ontology-22;nationality">
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Actor"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Director"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Person"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Producer"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Writer"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#numberofPages -->
+
+    <DatatypeProperty rdf:about="&untitled-ontology-22;numberofPages">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Book"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#publishDate -->
+
+    <DatatypeProperty rdf:about="&untitled-ontology-22;publishDate">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Book"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#releasedate -->
+
+    <DatatypeProperty rdf:about="&untitled-ontology-22;releasedate">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Movie"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#runtime -->
+
+    <DatatypeProperty rdf:about="&untitled-ontology-22;runtime">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-22;Movie"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#Actor -->
+
+    <Class rdf:about="&untitled-ontology-22;Actor">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-22;Person"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#Award -->
+
+    <Class rdf:about="&untitled-ontology-22;Award"/>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#Book -->
+
+    <Class rdf:about="&untitled-ontology-22;Book"/>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#Director -->
+
+    <Class rdf:about="&untitled-ontology-22;Director">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-22;Person"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#Genre -->
+
+    <Class rdf:about="&untitled-ontology-22;Genre"/>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#Movie -->
+
+    <Class rdf:about="&untitled-ontology-22;Movie"/>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#Person -->
+
+    <Class rdf:about="&untitled-ontology-22;Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#Producer -->
+
+    <Class rdf:about="&untitled-ontology-22;Producer">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-22;Person"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#Writer -->
+
+    <Class rdf:about="&untitled-ontology-22;Writer">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-22;Person"/>
+    </Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#A_Widow_for_One_Year -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-22;A_Widow_for_One_Year">
+        <rdf:type rdf:resource="&untitled-ontology-22;Book"/>
+        <untitled-ontology-22:numberofPages>100</untitled-ontology-22:numberofPages>
+        <untitled-ontology-22:bookname>A_Widow_for_One_Year</untitled-ontology-22:bookname>
+        <untitled-ontology-22:isWrittenBy rdf:resource="&untitled-ontology-22;John_Irving"/>
+        <untitled-ontology-22:isAdaptedinto rdf:resource="&untitled-ontology-22;The_Door_in_the_Floor"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#An_American_Tragedy -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-22;An_American_Tragedy">
+        <rdf:type rdf:resource="&untitled-ontology-22;Movie"/>
+        <untitled-ontology-22:movietitle>An_American_Tragedy</untitled-ontology-22:movietitle>
+        <untitled-ontology-22:isBasedOn rdf:resource="&untitled-ontology-22;An_American_Tragedy_novel"/>
+        <untitled-ontology-22:hasDirector rdf:resource="&untitled-ontology-22;Josef_von_Sternberg"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#An_American_Tragedy_novel -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-22;An_American_Tragedy_novel">
+        <rdf:type rdf:resource="&untitled-ontology-22;Book"/>
+        <untitled-ontology-22:bookname>An_American_Tragedy</untitled-ontology-22:bookname>
+        <untitled-ontology-22:numberofPages>990</untitled-ontology-22:numberofPages>
+        <untitled-ontology-22:isAdaptedinto rdf:resource="&untitled-ontology-22;An_American_Tragedy_novel"/>
+        <untitled-ontology-22:isWrittenBy rdf:resource="&untitled-ontology-22;Theodore_Dreiser"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#BAFTA_Film -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-22;BAFTA_Film">
+        <rdf:type rdf:resource="&untitled-ontology-22;Award"/>
+        <untitled-ontology-22:Awardname>BAFTA_Film</untitled-ontology-22:Awardname>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#Brian_Selznick -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-22;Brian_Selznick">
+        <rdf:type rdf:resource="&untitled-ontology-22;Writer"/>
+        <untitled-ontology-22:name>Brian_Selznick</untitled-ontology-22:name>
+        <untitled-ontology-22:isAuthorOf rdf:resource="&untitled-ontology-22;The_Invention_of_Hugo_Cabret"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#Golden_Globe -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-22;Golden_Globe">
+        <rdf:type rdf:resource="&untitled-ontology-22;Award"/>
+        <untitled-ontology-22:Awardname>Golden_Globe</untitled-ontology-22:Awardname>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#Hugo -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-22;Hugo">
+        <rdf:type rdf:resource="&untitled-ontology-22;Movie"/>
+        <untitled-ontology-22:releasedate>2009</untitled-ontology-22:releasedate>
+        <untitled-ontology-22:movietitle>Hugo</untitled-ontology-22:movietitle>
+        <untitled-ontology-22:isAwardedWith rdf:resource="&untitled-ontology-22;Oscar"/>
+        <untitled-ontology-22:isBasedOn rdf:resource="&untitled-ontology-22;The_Invention_of_Hugo_Cabret"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#John_Irving -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-22;John_Irving">
+        <rdf:type rdf:resource="&untitled-ontology-22;Writer"/>
+        <untitled-ontology-22:name>John_Irving</untitled-ontology-22:name>
+        <untitled-ontology-22:isAuthorOf rdf:resource="&untitled-ontology-22;A_Widow_for_One_Year"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#Jonathan_Demme -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-22;Jonathan_Demme">
+        <rdf:type rdf:resource="&untitled-ontology-22;Director"/>
+        <untitled-ontology-22:name>Jonathan_Demme</untitled-ontology-22:name>
+        <untitled-ontology-22:isDirectorOf rdf:resource="&untitled-ontology-22;The_Silence_of_the_Lambs"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#Josef_von_Sternberg -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-22;Josef_von_Sternberg">
+        <rdf:type rdf:resource="&untitled-ontology-22;Director"/>
+        <untitled-ontology-22:name>Josef_von_Sternberg</untitled-ontology-22:name>
+        <untitled-ontology-22:isDirectorOf rdf:resource="&untitled-ontology-22;An_American_Tragedy"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#Martin_Scorsese -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-22;Martin_Scorsese">
+        <rdf:type rdf:resource="&untitled-ontology-22;Director"/>
+        <untitled-ontology-22:name>Martin_Scorsese</untitled-ontology-22:name>
+        <untitled-ontology-22:isDirectorOf rdf:resource="&untitled-ontology-22;Hugo"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#Miscellaneous -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-22;Miscellaneous">
+        <rdf:type rdf:resource="&untitled-ontology-22;Award"/>
+        <untitled-ontology-22:Awardname>Miscellaneous</untitled-ontology-22:Awardname>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#Oscar -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-22;Oscar">
+        <rdf:type rdf:resource="&untitled-ontology-22;Award"/>
+        <untitled-ontology-22:Awardname>Oscar</untitled-ontology-22:Awardname>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#Primetime_Emmy -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-22;Primetime_Emmy">
+        <rdf:type rdf:resource="&untitled-ontology-22;Award"/>
+        <untitled-ontology-22:Awardname>Primetime_Emmy</untitled-ontology-22:Awardname>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#The_Door_in_the_Floor -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-22;The_Door_in_the_Floor">
+        <rdf:type rdf:resource="&untitled-ontology-22;Movie"/>
+        <untitled-ontology-22:movietitle>The_Door_in_the_Floor</untitled-ontology-22:movietitle>
+        <untitled-ontology-22:isBasedOn rdf:resource="&untitled-ontology-22;A_Widow_for_One_Year"/>
+        <untitled-ontology-22:hasDirector rdf:resource="&untitled-ontology-22;Tod_Williams"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#The_Invention_of_Hugo_Cabret -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-22;The_Invention_of_Hugo_Cabret">
+        <rdf:type rdf:resource="&untitled-ontology-22;Book"/>
+        <untitled-ontology-22:bookname>The_Invention_of_Hugo_Cabret</untitled-ontology-22:bookname>
+        <untitled-ontology-22:numberofPages>435</untitled-ontology-22:numberofPages>
+        <untitled-ontology-22:isWrittenBy rdf:resource="&untitled-ontology-22;Brian_Selznick"/>
+        <untitled-ontology-22:isAdaptedinto rdf:resource="&untitled-ontology-22;Hugo"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#The_Silence_of_the_Lambs -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-22;The_Silence_of_the_Lambs">
+        <rdf:type rdf:resource="&untitled-ontology-22;Movie"/>
+        <untitled-ontology-22:movietitle>The_Silence_of_the_Lambs</untitled-ontology-22:movietitle>
+        <untitled-ontology-22:releasedate>1991</untitled-ontology-22:releasedate>
+        <untitled-ontology-22:isAwardedWith rdf:resource="&untitled-ontology-22;Oscar"/>
+        <untitled-ontology-22:isBasedOn rdf:resource="&untitled-ontology-22;The_Silence_of_the_Lambs_novel"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#The_Silence_of_the_Lambs_novel -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-22;The_Silence_of_the_Lambs_novel">
+        <rdf:type rdf:resource="&untitled-ontology-22;Book"/>
+        <untitled-ontology-22:numberofPages>454</untitled-ontology-22:numberofPages>
+        <untitled-ontology-22:bookname>The_Silence_of_the_Lambs</untitled-ontology-22:bookname>
+        <untitled-ontology-22:isAdaptedinto rdf:resource="&untitled-ontology-22;The_Silence_of_the_Lambs"/>
+        <untitled-ontology-22:isWrittenBy rdf:resource="&untitled-ontology-22;Thomas_Harris"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#Theodore_Dreiser -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-22;Theodore_Dreiser">
+        <rdf:type rdf:resource="&untitled-ontology-22;Writer"/>
+        <untitled-ontology-22:name>Theodore_Dreiser</untitled-ontology-22:name>
+        <untitled-ontology-22:isAuthorOf rdf:resource="&untitled-ontology-22;An_American_Tragedy_novel"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#Thomas_Harris -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-22;Thomas_Harris">
+        <rdf:type rdf:resource="&untitled-ontology-22;Writer"/>
+        <untitled-ontology-22:name>Thomas_Harris</untitled-ontology-22:name>
+        <untitled-ontology-22:isAuthorOf rdf:resource="&untitled-ontology-22;The_Silence_of_the_Lambs_novel"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fcqiao/ontologies/2014/3/untitled-ontology-22#Tod_Williams -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-22;Tod_Williams">
+        <rdf:type rdf:resource="&untitled-ontology-22;Director"/>
+        <untitled-ontology-22:name>Tod_Williams</untitled-ontology-22:name>
+        <untitled-ontology-22:isDirectorOf rdf:resource="&untitled-ontology-22;The_Door_in_the_Floor"/>
+    </NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
